@@ -1,0 +1,277 @@
+* {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  color: var(--white);
+  font-family: "Roboto", sans-serif;
+}
+
+p {
+  margin: 0;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: var(--bgBlack);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+:root {
+  --bgBlack: #000000;
+  --bg: #1d1d1d;
+  --white: #fff;
+  --fullwidth: 100%;
+}
+html {
+  max-height: 100vh;
+  flex: 1;
+  font-size: 100%;
+}
+
+.header {
+  background-color: var(--bg);
+  align-items: center;
+  display: flex;
+  height: 10vh;
+  flex: 1;
+  padding: 0 40px;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.links_header a {
+  margin: 0 20px;
+  font-size: 1.4em;
+  flex-direction: column;
+  color: var(--white);
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.profile_right_header {
+  font-size: 2em;
+}
+
+/* MIDDLE */
+
+.middle {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100vw;
+  height: 80vh;
+  flex: 1;
+  position: absolute;
+  display: none;
+  background-color: var(--bgBlack);
+}
+.middle_back {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100vw;
+  height: 80vh;
+  flex: 1;
+
+  background-image: url("http://zydigital.com.br/wp-content/uploads/2018/10/youtube-music-screenshot-home.jpg");
+  background-size: cover;
+  background-position-y: -180px;
+}
+
+.middle_image {
+  align-items: center;
+  justify-content: center;
+  flex: 2;
+  display: flex;
+  background-repeat: no-repeat;
+  background-color: black;
+  background-image: url("https://miro.medium.com/max/1400/0*F3Hrw2qU3aER2Qxr");
+  background-size: 80%;
+  background-position: center;
+}
+
+.middle_playlist {
+  margin-right: 20px;
+  color: white;
+  max-height: 100%;
+  overflow: auto;
+  padding: 20px 10px 10px 10px;
+  flex-direction: row;
+  flex: 1;
+  background-color: var(--bgBlack);
+}
+
+/* PLAYLIST ITEM */
+.item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: #000000;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+
+  margin: 5px 10px 5px 0;
+}
+
+body > div.middle > div.middle_playlist > div > div.img {
+  display: flex;
+  flex: 1;
+  align-items: center;
+}
+body > div.middle > div.middle_playlist > div > div.texto {
+  display: flex;
+  flex: 4;
+  flex-direction: column;
+}
+
+body > div.middle > div.middle_playlist > div > div.minutos > div {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  font-size: 0.875em;
+}
+
+/* FOOTER **/
+.footer {
+  background-color: var(--bg);
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  height: 10vh;
+  width: 100vw;
+
+  flex: 1;
+  /*INICIA EM BAIXO*/
+  /* position: absolute;*/
+  cursor: pointer;
+  bottom: 0;
+  justify-content: space-between;
+}
+.bar {
+  display: inline;
+  background-color: red;
+  width: 80%;
+  height: 2px;
+}
+
+.inFooter {
+  padding: 50px;
+  background-color: var(--bg);
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  height: 10vh;
+  width: 100vw;
+
+  flex: 1;
+
+  bottom: 0;
+  justify-content: space-between;
+}
+
+.footer_play_buttons {
+  font-size: 1em;
+  flex: 1;
+}
+
+/* ICONES DE CONTROLE PLAY PAUSE */
+body > div.footer > div > div ion-icon {
+  cursor: pointer;
+  padding: 15px;
+}
+/* #forward_control {
+  cursor: pointer;
+
+  padding: 15px;
+}
+#back_control {
+  cursor: pointer;
+
+  padding: 15px;
+} */
+
+/* FIM ITENS DE CONTROLE PLAY PAUSE */
+
+.footer_middle_buttons {
+  font-size: 1em;
+  flex: 2;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+}
+
+/* Thumb da musica no footer */
+body > div.footer > div > div.footer_middle_buttons > div > div.item {
+  width: 400px;
+  background-color: unset;
+  border: unset;
+}
+
+body
+  > div.footer
+  > div
+  > div.footer_middle_buttons
+  > div
+  > div.item
+  > div.texto {
+  margin: 0 20px;
+}
+/* FIm Thumb da musica no footer */
+
+.footer_right_buttons {
+  text-align: right;
+  flex: 1;
+  margin-left: auto;
+}
+
+.aaa {
+  align-items: center;
+  display: flex;
+  padding: 0 10px;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.aaa > div {
+  margin: 10px;
+}
+@media all and (max-width: 700px) {
+  .middle {
+    flex-direction: column;
+  }
+  .middle_image {
+    flex: 1;
+    margin-bottom: 10px;
+  }
+  .links_header a {
+    font-size: 0.8em;
+  }
+  .aaa > div:nth-child(1) {
+    display: none;
+  }
+
+  body > div.footer > div > div.footer_play_buttons > ion-icon:nth-child(1) {
+    display: none;
+  }
+  body > div.footer > div > div.footer_play_buttons > ion-icon:nth-child(2) {
+  }
+  body > div.footer > div > div.footer_play_buttons > ion-icon:nth-child(3) {
+    display: none;
+  }
+
+  .footer_play_buttons {
+    font-size: 2em;
+  }
+}

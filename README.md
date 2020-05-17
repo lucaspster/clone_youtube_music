@@ -7,7 +7,7 @@ Uma página com HMTL, JS Vanilla e Jquery
 Fique a vontade para mandar pull requests :)
 
 ## Código
- 
+
 - [x] ruim :smile:
 - [ ] bom
 - [ ] ótimo
